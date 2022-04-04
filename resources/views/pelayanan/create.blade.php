@@ -5,13 +5,13 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Input Pelaku</h1>
+            <h1 class="mt-4">Input Data Pelayanan</h1>
             <div class="row">
                 <div class="col-xl">
                     <div class="card mb-4">
                             <div class="card-header">
                               <i class="fas fa-chart-area me-1"></i>
-                                 Add Pelaku
+                                 Add Pelayanan
                             </div>
                     <div class="card-body">
                         @if ($errors->any())

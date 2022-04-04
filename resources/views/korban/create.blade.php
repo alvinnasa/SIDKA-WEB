@@ -37,7 +37,33 @@
                             </div>
                             <div class="form-group">
                                 <label for="lembaga">Kecamatan</label>                    
-                                <input type="text" name="kecamatan" class="form-control" id="email" aria-describedby="email" >                
+                                <select name="kecamatan" class="form-control" id="email" >
+                                <option disable value>Pilih Kecamatan</option>   
+                                <option value="Adipala">Adipala</option>
+                                <option value="Bantarsari">Bantarsari</option>
+                                <option value="Binangun">Binangun</option>
+                                <option value="Cilacap Selatan">Cilacap Selatan</option>
+                                <option value="Cilacap Tengah">Cilacap Tengah</option>
+                                <option value="Cilacap Utara">Cilacap Utara</option>
+                                <option value="Cimanggu">Cimanggu</option>
+                                <option value="Cipari">Cipari</option>
+                                <option value="Dayeuhluhur">Dayeuhluhur</option>
+                                <option value="Gandrungmangu">Gandrungmangu</option>
+                                <option value="Jeruklegi">Jeruklegi</option>
+                                <option value="Kampung Laut">Kampung Laut</option>
+                                <option value="Karangpucung">Karangpucung</option>
+                                <option value="Kawunganten">Kawunganten</option>
+                                <option value="Kedungreja">Kedungreja</option>
+                                <option value="Kesugihan">Kesugihan</option>
+                                <option value="Kroya">Kroya</option>
+                                <option value="Majenang">Majenang</option>
+                                <option value="Maos">Maos</option>
+                                <option value="Nusawungu">Nusawungu</option>
+                                <option value="Patimuan">Patimuan</option>
+                                <option value="Sampang">Sampang</option>
+                                <option value="Sidareja">Sidareja</option>
+                                <option value="Wanareja">Wanareja</option>  
+                                </select>              
                             </div>
                             <div class="form-group">
                                 <label for="lembaga">Kabupaten</label>                    
