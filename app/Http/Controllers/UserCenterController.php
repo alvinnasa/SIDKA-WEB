@@ -13,7 +13,8 @@ class UserCenterController extends Controller
      */
     public function index()
     {
-        return view('adduser');
+        $useradmin = user::all();
+        return view('adduser',compact('useradmin'));
     }
 
     /**

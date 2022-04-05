@@ -58,6 +58,40 @@
                     </div>
                 </div>  
             </div>
+            <table class="table">
+        
+    <thead class="thead-dark">
+        <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Level</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    @foreach ($useradmin as $user)
+        <tr>
+            <td>{{$user->id}}</td>
+            <td>{{$user->name}}</td>
+            <td>{{$user->username}}</td>
+            <td>{{$user->email}}</td>
+            <td>{{$user->level}}</td>
+            <td>
+            <form action="" method="POST">
+
+                <a class="btn btn-primary" href="">Edit</a>
+
+                @csrf
+                @method('DELETE')
+
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            </td>
+        </tr>
+    @endforeach
+       
+    </table>
         </div>
     </main>
     @include('nav.footer')
