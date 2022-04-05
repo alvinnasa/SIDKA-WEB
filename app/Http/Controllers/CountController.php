@@ -11,7 +11,12 @@ class CountController extends Controller
     public function count(){
         $hitungkasus = kasus::count();
         $hitungkorban = korban::count();
-        return view('welcome',compact('hitungkasus','hitungkorban'));
+        $hitunglaki = korban::where('jenis_kelamin','=','laki-laki')->count();
+        $hitungperempuan = korban::where('jenis_kelamin','=','perempuan')->count();
+
+        $kecamatancount = korban::selectRaw('COUNT(1) as total, kecamatan')->groupBy('kecamatan')->get();
+
+        return view('welcome',compact('hitungkasus','hitungkorban','hitungperempuan','hitunglaki','kecamatancount'));
 
     }
 }

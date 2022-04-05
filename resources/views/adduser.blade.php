@@ -25,7 +25,7 @@
                         </div>
                         @endif
         
-                        <form method="post" action="{{ route('pelaku.store') }}" id="myForm">
+                        <form method="post" action="{{ route('add-user.store') }}" id="myForm">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Nama</label>                    
@@ -46,7 +46,7 @@
       
                             <div class="form-group">
                                 <label for="lembaga">Level</label> 
-                                <select class="form-control" name="id">
+                                <select class="form-control" name="level">
                                 <option disable value>Pilih Level</option>                
                                 <option value="admin">Admin</option>
                                 <option value="editor">User</option>        

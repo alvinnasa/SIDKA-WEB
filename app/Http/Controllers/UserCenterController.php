@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use app\Models\User;
 class UserCenterController extends Controller
 {
     /**
@@ -23,7 +23,7 @@ class UserCenterController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -34,7 +34,8 @@ class UserCenterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $useradmin = user::create($request->all());
+        return view('adduser')->with('success', 'user Berhasil Ditambahkan');
     }
 
     /**
