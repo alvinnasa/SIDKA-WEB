@@ -16,13 +16,13 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><b>ID Korban: </b>{{ $korban->id_korban }}</li>
                                 <li class="list-group-item"><b>Lembaga: </b>{{ $korban->nama_korban }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->alamat }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->kecamatan }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->kabupaten }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->tgl_lahir }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->umur }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->hubungan }}</li>
-                                <li class="list-group-item"><b>Tanggal Laporan: </b>{{ $korban->jenis_kelamin }}</li>
+                                <li class="list-group-item"><b>Alamat: </b>{{ $korban->alamat }}</li>
+                                <li class="list-group-item"><b>Kecamatan: </b>{{ $korban->kecamatan }}</li>
+                                <li class="list-group-item"><b>Kabupaten: </b>{{ $korban->kabupaten }}</li>
+                                <li class="list-group-item"><b>Tanggal Lahir: </b>{{ $korban->tgl_lahir }}</li>
+                                <li class="list-group-item"><b>Umur: </b>{{ $korban->umur }}</li>
+                                <li class="list-group-item"><b>Hubungan: </b>{{ $korban->hubungan }}</li>
+                                <li class="list-group-item"><b>Jenis Kelamin: </b>{{ $korban->jenis_kelamin }}</li>
                             </ul>
                        </div>
                  <div class="card-header">
