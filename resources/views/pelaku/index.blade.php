@@ -14,7 +14,7 @@
         @endif 
     <div class="card-header">      
     <i class="fas fa-user"></i>
-    Data Korban
+    Data Pelaku
     <a class="btn btn-success" href="{{ route('pelaku.create') }}"> ADD Pelaku</a>
     </div>
    
