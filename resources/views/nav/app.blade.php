@@ -15,8 +15,10 @@
 
     <body>
         @include('nav/navtop')
-       
+        @if(Request::is('/'))
+        @else
         @include('nav/nav')
+        @endif
             @yield('content')
         
         </div>
@@ -27,6 +29,7 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="{{asset('bootstrap/js/datatables-simple-demo.js')}}"></script>
+        <script src="{{asset('bootstrap/js/Chart.js')}}"></script>
         
     </body>
 
