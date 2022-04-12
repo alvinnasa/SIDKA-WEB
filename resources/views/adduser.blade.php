@@ -78,7 +78,7 @@
             <td>{{$user->email}}</td>
             <td>{{$user->level}}</td>
             <td>
-            <form action="" method="POST">
+            <form action="{{route('add-user.destroy,$user->id')}}" method="POST">
 
                 <a class="btn btn-primary" href="">Edit</a>
 

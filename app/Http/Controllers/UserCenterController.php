@@ -35,8 +35,9 @@ class UserCenterController extends Controller
      */
     public function store(Request $request)
     {
-        $useradmin = user::create($request->all());
-        return view('adduser')->with('success', 'user Berhasil Ditambahkan');
+        $useradmin1 = user::create($request->all());
+        $useradmin = user::all();
+        return view('adduser',compact('useradmin'))->with('success', 'user Berhasil Ditambahkan');
     }
 
     /**
@@ -81,6 +82,8 @@ class UserCenterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        user::find($id)->delete();
+        return redirect()->route('add-user')
+            ->with('success', 'Data Berhasil Dihapus');
     }
 }
