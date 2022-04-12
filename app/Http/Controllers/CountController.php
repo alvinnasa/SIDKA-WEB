@@ -15,8 +15,9 @@ class CountController extends Controller
         $hitungperempuan = korban::where('jenis_kelamin','=','perempuan')->count();
 
         $kecamatancount = korban::selectRaw('COUNT(1) as total, kecamatan')->groupBy('kecamatan')->get();
-
-        return view('welcome',compact('hitungkasus','hitungkorban','hitungperempuan','hitunglaki','kecamatancount'));
+        $laki = korban::selectRaw('COUNT(1) as total, kecamatan')->groupBy('kecamatan')->get();
+      
+        return view('dashboard',compact('hitungkasus','hitungkorban','hitungperempuan','hitunglaki','kecamatancount'));
 
     }
 }
