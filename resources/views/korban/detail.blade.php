@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><b>ID Korban: </b>{{ $korban->id_korban }}</li>
-                                <li class="list-group-item"><b>Lembaga: </b>{{ $korban->nama_korban }}</li>
+                                <li class="list-group-item"><b>Nama Korban: </b>{{ $korban->nama_korban }}</li>
                                 <li class="list-group-item"><b>Alamat: </b>{{ $korban->alamat }}</li>
                                 <li class="list-group-item"><b>Kecamatan: </b>{{ $korban->kecamatan }}</li>
                                 <li class="list-group-item"><b>Kabupaten: </b>{{ $korban->kabupaten }}</li>
