@@ -58,22 +58,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xl-12">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        Total Kasus Dan Korban
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
+                            
                             <div class="col-xl-12">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
                                         Total Kasus Setiap Kecamatan
                                     </div>
-                                    <div class="card-body"><canvas id="myChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><div id="myChart" width="100%" height="40"></div></div>
                                 </div>
                             </div>
                         </div>
@@ -116,6 +108,44 @@
                     </div>
                 </main>
                 @include('nav.footer')
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script>
+                    Highcharts.chart('myChart', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Jumlah Kasus Setiap Kecamatan'
+            },
+            xAxis: {
+                categories: {!!json_encode($categories)!!},
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Jumlah Kasus'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:15px">{point.key}</span><table>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Total Kasus',
+                data: {{json_encode($total)}}
+
+            }]
+        });
+        </script>
             </div>
         </div>
 

@@ -16,8 +16,14 @@ class CountController extends Controller
 
         $kecamatancount = korban::selectRaw('COUNT(1) as total, kecamatan')->groupBy('kecamatan')->get();
         $laki = korban::selectRaw('COUNT(1) as total, kecamatan')->groupBy('kecamatan')->get();
-      
-        return view('dashboard',compact('hitungkasus','hitungkorban','hitungperempuan','hitunglaki','kecamatancount'));
+        $categories = [];
+        $total = [];
+        foreach($kecamatancount as $con){
+            $categories [] = $con->kecamatan;
+            $total [] = $con->total;
+        }
+        
+        return view('dashboard',compact('hitungkasus','hitungkorban','hitungperempuan','hitunglaki','kecamatancount','categories','total'));
 
     }
 }
