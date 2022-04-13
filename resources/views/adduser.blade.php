@@ -6,12 +6,17 @@
     <main>
         <div class="container-fluid px-4">
             <h1 class="mt-4">Tambah Pengguna</h1>
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+            @endif 
             <div class="row">
                 <div class="col-xl">
                     <div class="card mb-4">
                             <div class="card-header">
-                              <i class="fas fa-chart-area me-1"></i>
-                                 Data Pengguna
+                            <i class="fas fa-chart-area me-1"></i>
+                                Data Pengguna
                             </div>
                     <div class="card-body">
                         @if ($errors->any())
@@ -24,7 +29,6 @@
                             </ul>
                         </div>
                         @endif
-        
                         <form method="post" action="{{ route('add-user.store') }}" id="myForm">
                             @csrf
                             <div class="form-group">
@@ -43,7 +47,6 @@
                                 <label for="lembaga">Password</label>                    
                                 <input type="text" name="password" class="form-control" id="email" aria-describedby="email" >                
                             </div>
-      
                             <div class="form-group">
                                 <label for="lembaga">Level</label> 
                                 <select class="form-control" name="level">
@@ -78,7 +81,7 @@
             <td>{{$user->email}}</td>
             <td>{{$user->level}}</td>
             <td>
-            <form action="{{route('add-user.destroy,$user->id')}}" method="POST">
+            <form action="{{route('add-user.destroy',$user->id)}}" method="POST">
 
                 <a class="btn btn-primary" href="">Edit</a>
 

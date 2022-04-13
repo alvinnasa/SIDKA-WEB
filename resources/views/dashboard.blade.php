@@ -109,43 +109,42 @@
                 </main>
                 @include('nav.footer')
                 <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script>
+                <script>
                     Highcharts.chart('myChart', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Jumlah Kasus Setiap Kecamatan'
-            },
-            xAxis: {
-                categories: {!!json_encode($categories)!!},
-                crosshair: true
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Jumlah Kasus'
-                }
-            },
-            tooltip: {
-                headerFormat: '<span style="font-size:15px">{point.key}</span><table>',
-                footerFormat: '</table>',
-                shared: true,
-                useHTML: true
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: 'Total Kasus',
-                data: {{json_encode($total)}}
-
-            }]
-        });
-        </script>
+                    chart: {
+                        type: 'column'
+                    },
+                    title: {
+                        text: 'Jumlah Kasus Setiap Kecamatan'
+                    },
+                    xAxis: {
+                        categories: {!!json_encode($categories)!!},
+                        crosshair: true
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Jumlah Kasus'
+                        }
+                    },
+                    tooltip: {
+                        headerFormat: '<span style="font-size:15px">{point.key}</span><table>',
+                        footerFormat: '</table>',
+                        shared: true,
+                        useHTML: true
+                    },
+                    plotOptions: {
+                        column: {
+                                    pointPadding: 0.2,
+                                    borderWidth: 0
+                                }
+                                },
+                    series: [{
+                        name: 'Total Kasus',
+                        data: {{json_encode($total)}}
+                            }]
+                    });
+                </script>
             </div>
         </div>
 
