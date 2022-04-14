@@ -11,24 +11,28 @@
                             </a>
                             
                             <a class="nav-link" href="{{ url('kasus') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-gavel"></i></div>
                                 Kasus Center
                             </a>
                             <a class="nav-link" href="{{ url('korban') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
                                 Korban Center
                             </a>
                             <a class="nav-link" href="{{ url('pelaku') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
                                 Pelaku Center
                             </a>
                             <a class="nav-link" href="{{url('pelayanan')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
                                 Layanan Korban 
                             </a>
                             <a class="nav-link" href="{{url('add-user')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 ADD User
+                            </a>
+                            <a class="nav-link" href="https://drive.google.com/drive/folders/1OeL8aMUC9h_kngBdEW9JwGLaHOQqH3Ef" target="_blank">
+                                <div class="sb-nav-link-icon"><i class="fas fa-info"></i></div>
+                                Panduan Aplikasi SIDKA
                             </a>
                         </div>
                     </div>
